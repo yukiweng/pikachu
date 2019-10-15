@@ -160,7 +160,8 @@
   background: #fc4a62;
   position: absolute;
   bottom: -10px;
-  left: 50% margin-left: -50px;
+  left: 50%;
+  margin-left: -50px;
   border-radius: 50%
 }
 /* 画完啦！ */
