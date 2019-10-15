@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>静态皮卡丘</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width:100vw;
+  background: #FEE433
+}
+.pikachu {
+  width: 100%;
+  height: 168px;
+  position: relative;
+  z-index: 1
+}
+.nose {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 12px;
+  border-color: black transparent transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  margin-left: -11px;
+}
+.eye {
+  width: 49px;
+  height: 49px;
+  background: #2e2e2e;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 50%
+}
+.eye.left {
+  right: 50%;
+  margin-right: 90px;
+}
+.eye.right {
+  left: 50%;
+  margin-left: 90px;
+}
+.eye::before {
+  content: '';
+  display: block;
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 8px
+}
+.face {
+  width: 68px;
+  height: 68px;
+  background: red;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px
+}
+.face.left {
+  right: 50%;
+  margin-right: 120px
+}
+.face.right {
+  left: 50%;
+  margin-left: 120px
+}
+.upperLip {
+  width: 64px;
+  height: 20px;
+  border: 2px solid black;
+  position: absolute;
+  top: 46px;
+  background: #FEE433
+}
+.upperLip.left {
+  border-bottom-left-radius: 40px 20px;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-20deg);
+  right: 50%
+}
+.upperLip.right {
+  border-bottom-right-radius: 40px 20px;
+  border-top: none;
+  border-left: none;
+  transform: rotate(20deg);
+  left: 50%;
+}
+.lowerLip-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  z-index: -1;
+  height: 116px;
+  width: 100px;
+  overflow: hidden;
+}
+.lowerLip {
+  background: #990513;
+  width: 100px;
+  height: 400px;
+  border-radius: 500px/1600px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden
+}
+.lowerLip::after {
+  content: '';
+  height: 100px;
+  width: 100px;
+  background: #fc4a62;
+  position: absolute;
+  bottom: -10px;
+  left: 50% margin-left: -50px;
+  border-radius: 50%
+}
+  </style>
+  </head>
+
+<body>
+  <div class="pikachu">
+    <div class="nose"></div>
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="face left"></div>
+    <div class="face right"></div>
+    <div class="upperLip left"></div>
+    <div class="upperLip right"></div>
+    <div class="lowerLip-wrapper">
+      <div class="lowerLip"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
